@@ -461,6 +461,41 @@
     body.en .lead-en { display: block; }
     body:not(.en) .lead-en { display: none; }
 
+    /* ─── ODS ─── */
+    .ods-wrap { background: var(--gray); }
+    .ods-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 24px; margin-top: 40px;
+    }
+    .ods-card {
+      background: var(--white); border: 1px solid var(--rule);
+      border-radius: 4px; padding: 28px 24px;
+      border-top: 4px solid var(--forest);
+      transition: border-color 0.15s;
+    }
+    .ods-card:hover { border-top-color: var(--lime); }
+    .ods-badge {
+      display: inline-block; color: #fff;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 1px;
+      padding: 4px 12px; border-radius: 3px; margin-bottom: 14px;
+    }
+    .ods-card h4 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem; font-weight: 400; color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .ods-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; margin-bottom: 14px; }
+    .ods-link {
+      font-size: 0.8rem; font-weight: 500; color: var(--forest);
+      text-decoration: none; border-bottom: 1px solid var(--rule);
+      padding-bottom: 2px; transition: border-color 0.15s;
+    }
+    .ods-link:hover { border-color: var(--forest); }
+    .ods-source {
+      margin-top: 24px; font-size: 0.78rem; color: var(--muted);
+    }
+    .ods-source a { color: var(--forest); text-decoration: none; }
+
     @media (max-width: 900px) {
       nav { padding: 0 16px; height: 54px; }
       .nav-center { display: none; }
@@ -532,6 +567,9 @@
       .tl-body p { font-size: 0.82rem; }
 
       .pi-grid { grid-template-columns: 1fr; gap: 16px; }
+
+      .ods-grid { grid-template-columns: 1fr; gap: 16px; }
+      .ods-card { padding: 22px 18px; }
       .pi-card { padding: 22px 18px; }
 
       .team-grid { grid-template-columns: 1fr 1fr; }
@@ -582,6 +620,7 @@
     <a href="#arquitectura">Arquitectura</a>
     <a href="#mercado">Mercado</a>
     <a href="#modelo">Modelo</a>
+    <a href="#ods">ODS</a>
     <a href="#equipo">Equipo</a>
   </div>
   <div class="nav-right"></div>
@@ -984,8 +1023,38 @@
         <div class="team-cell"><div class="team-initials">JC</div><h5>José Carlos Rodríguez González</h5><p>Ing. TIC · 7°</p></div>
         <div class="team-cell"><div class="team-initials">MJ</div><h5>María Jatziry López Morales</h5><p>Ing. Industrial · 7°</p></div>
         <div class="team-cell"><div class="team-initials">MB</div><h5>M.C. María Magdalena Becerra López</h5><p><span class="es-txt">Asesora</span><span class="en-txt">Advisor</span></p></div>
-        <div class="team-cell"><div class="team-initials">FR</div><h5>Dr. Fernando Robles Casillas</h5><p><span class="es-txt">Asesor</span><span class="en-txt">Advisor</span></p></div>
+        <div class="team-cell"><div class="team-initials">FR</div><h5>Ing. Fernando Robles Casillas</h5><p><span class="es-txt">Asesor</span><span class="en-txt">Advisor</span></p></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ODS -->
+<section class="section ods-wrap" id="ods">
+  <div class="row">
+    <div class="col-label"><span class="es-txt">09 &nbsp; Impacto global</span><span class="en-txt">09 &nbsp; Global impact</span></div>
+    <div class="col-content">
+      <h2 class="serif">
+        <span class="es-txt">Alineación con los <em>Objetivos de Desarrollo Sostenible</em></span>
+        <span class="en-txt">Aligned with the <em>Sustainable Development Goals</em></span>
+      </h2>
+      <p class="lead es-txt">AgroScan AI contribuye directamente a dos de los 17 Objetivos de Desarrollo Sostenible establecidos por la Organización de las Naciones Unidas.</p>
+      <p class="lead en-txt">AgroScan AI directly contributes to two of the 17 Sustainable Development Goals established by the United Nations.</p>
+      <div class="ods-grid">
+        <div class="ods-card">
+          <div class="ods-badge" style="background:#DDA63A;">ODS 2</div>
+          <h4><span class="es-txt">Hambre Cero</span><span class="en-txt">Zero Hunger</span></h4>
+          <p><span class="es-txt">Monitoreo de precisión que optimiza la productividad agrícola y reduce pérdidas de cultivos, contribuyendo a la seguridad alimentaria.</span><span class="en-txt">Precision monitoring that optimizes agricultural productivity and reduces crop losses, contributing to food security.</span></p>
+          <a href="https://www.un.org/sustainabledevelopment/es/hunger/" target="_blank" class="ods-link"><span class="es-txt">Conocer más sobre el ODS 2</span><span class="en-txt">Learn more about SDG 2</span></a>
+        </div>
+        <div class="ods-card">
+          <div class="ods-badge" style="background:#BF8B2E;">ODS 12</div>
+          <h4><span class="es-txt">Producción y Consumo Responsables</span><span class="en-txt">Responsible Consumption and Production</span></h4>
+          <p><span class="es-txt">Aplicación de insumos solo donde se necesitan, reduciendo el uso excesivo de agroquímicos y agua mediante agricultura de precisión.</span><span class="en-txt">Input application only where needed, reducing excessive use of agrochemicals and water through precision agriculture.</span></p>
+          <a href="https://www.un.org/sustainabledevelopment/es/sustainable-consumption-production/" target="_blank" class="ods-link"><span class="es-txt">Conocer más sobre el ODS 12</span><span class="en-txt">Learn more about SDG 12</span></a>
+        </div>
+      </div>
+      <p class="ods-source"><span class="es-txt">Fuente: Organización de las Naciones Unidas — </span><span class="en-txt">Source: United Nations — </span><a href="https://www.un.org/sustainabledevelopment/es/sustainable-development-goals/" target="_blank">un.org/sustainabledevelopment</a></p>
     </div>
   </div>
 </section>
